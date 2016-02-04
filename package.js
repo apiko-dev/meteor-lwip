@@ -13,7 +13,7 @@ Npm.depends({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('ecmascript');
-  api.addFiles('lwip.js');
+  api.addFiles('lwip.js', 'server');
   api.export('lwip', 'server');
 });
 
@@ -21,5 +21,5 @@ Package.onTest(function(api) {
   api.use('ecmascript');
   api.use('tinytest');
   api.use('jss:meteor-lwip');
-  api.addFiles('lwip-tests.js');
+  api.addFiles('lwip-tests.js', 'server');
 });
